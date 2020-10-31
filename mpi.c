@@ -1,13 +1,22 @@
 #!/bin/bash
-#SBATCH --job-name=parallel_job      # Job name
-#SBATCH --nodes=1                    # Run all processes on a single node	
-#SBATCH --ntasks-per-node=4                   # Run a single task		
-#SBATCH --time=00:05:00              # Time limit hrs:min:sec
-#SBATCH --output=parallel_%j.log     # Standard output and error log
-pwd; hostname; date
+# modified for default Azure SLURM cluster
+#SBATCH --job-name="gromacs"
+#SBATCH --output="gromacs.%j.%N.out"
+#SBATCH --partition=hpc
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=240
+#SBATCH --export=ALL
+#SBATCH -t 00:10:00
 
-echo "Running prime number generator program on $SLURM_CPUS_ON_NODE CPU cores"
+## Environment
+module purge
+module load mpi/openmpi-4.0.4
+source /mnt/exports/shared/home/ccuser/spack/share/spack/setup-env.sh
+spack compiler find
+spack load fftw
+source ./mnt/exports/shared/home/ccuser/gromacs2019-2/bin/GMXRC
 
-mpirun -np 4 a.out
+## Use srun to run the job
 
-date
+mpirun -np 200 mpirun gmx_mpi mdrun -s topol.tpr
+

@@ -1,27 +1,13 @@
-#include <mpi.h>
-#include <stdio.h>
+#!/bin/bash
+#SBATCH --job-name=parallel_job      # Job name
+#SBATCH --nodes=1                    # Run all processes on a single node	
+#SBATCH --ntasks-per-node=4                   # Run a single task		
+#SBATCH --time=00:05:00              # Time limit hrs:min:sec
+#SBATCH --output=parallel_%j.log     # Standard output and error log
+pwd; hostname; date
 
-int main(int argc, char** argv) {
-    // Initialize the MPI environment
-    MPI_Init(NULL, NULL);
+echo "Running prime number generator program on $SLURM_CPUS_ON_NODE CPU cores"
 
-    // Get the number of processes
-    int world_size;
-    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+mpirun -np 4 a.out
 
-    // Get the rank of the process
-    int world_rank;
-    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
-
-    // Get the name of the processor
-    char processor_name[MPI_MAX_PROCESSOR_NAME];
-    int name_len;
-    MPI_Get_processor_name(processor_name, &name_len);
-
-    // Print off a hello world message
-    printf("Hello world from processor %s, rank %d out of %d processors\n",
-           processor_name, world_rank, world_size);
-
-    // Finalize the MPI environment.
-    MPI_Finalize();
-}
+date
