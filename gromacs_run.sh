@@ -11,6 +11,9 @@
 module purge
 module load gcc-9.2.0
 module load mpi/impi
+source ~/spack/share/spack/setup-env.sh
+spack compiler find
+spack load hwloc
 
 source ~/gromacs2019-2/bin/GMXRC
 
