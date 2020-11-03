@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=grimacs     # Job name
+#SBATCH --job-name=gromacs     # Job name
 #SBATCH --nodes=2                    # Run all processes on a single node	
-#SBATCH --partition=htc
+#SBATCH --partition=hpc
 #SBATCH --ntasks-per-node=15
 #SBATCH --cpus-per-task=4                   # Run a single task		
 #SBATCH --time=00:59:00              # Time limit hrs:min:sec
@@ -14,8 +14,10 @@ module load mpi/impi
 source ~/spack/share/spack/setup-env.sh
 spack compiler find
 spack load hwloc
+PATH=$PATH:/usr/local/cuda-11.0/bin
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.0/lib64
 
 source ~/gromacs2019-2/bin/GMXRC
 
-mpirun -np 30 -genv I_MPI_PIN_DOMAIN=omp:compact -genv OMP_NUM_THREADS=4  gmx_mpi mdrun -s benchRIB.tpr
+mpirun -np 30 -genv I_MPI_PIN_DOMAIN=omp:compact -genv OMP_NUM_THREADS=4  gmx_mpi mdrun -s benchMEM.tpr
 
