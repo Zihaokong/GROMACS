@@ -1,0 +1,14 @@
+#SBATCH --partition=hpc
+#SBATCH --ntasks-per-node=4
+#SBATCH --time=00:59:00              # Time limit hrs:min:sec
+#SBATCH --output=parallel_%j.log     # Standard output and error log
+
+
+module purge
+module load gcc-9.2.0
+module load mpi/impi
+source ~/spack/share/spack/setup-env.sh
+spack load hwloc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.0/lib64
+
+mpirun -np 12 -genv I_MPI_PIN_DOMAIN=omp:compact gmx_mpi mdrun -ntomp 6 -nb gpu -gpu_id 0123 -s benchMEM.tpr
