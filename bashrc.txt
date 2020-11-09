@@ -1,5 +1,5 @@
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.0/lib64
-export PATH=$PATH:/usr/local/cuda-11.0/bin/nvcc
+export PATH=$PATH:/usr/local/cuda-11.0/bin/
 module load mpi/impi
 module load gcc-9.2.0
 source ~/spack/share/spack/setup-env.sh
