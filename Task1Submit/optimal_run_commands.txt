@@ -1,0 +1,1 @@
+mpirun -np 150 -genv I_MPI_PIN_DOMAIN=omp:compact -genv OMP_NUM_THREADS=4  gmx_mpi mdrun -s topol.tpr -v 

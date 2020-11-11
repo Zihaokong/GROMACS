@@ -1,0 +1,5 @@
+Water			125
+ProteinComplex		125
+ProteinMono		100
+ORF3A			125	
+Memb			100
