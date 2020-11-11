@@ -1,0 +1,23 @@
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.0/lib64
+export PATH=$PATH:/usr/local/cuda-11.0/bin/
+module load mpi/impi
+module load gcc-9.2.0
+source ~/spack/share/spack/setup-env.sh
+source ~/gromacs2020/bin/GMXRC
+spack load hwloc
+# User specific aliases and functions
+
+gmx_mpi hbond -f md_replica_gromos_1.trr -s production.tpr -num gromos_hbond1.xvg
+gmx_mpi hbond -f md_replica_gromos_2.trr -s production.tpr -num gromos_hbond2.xvg
+
+gmx_mpi gyrate -f md_replica_gromos_1.trr -s production.tpr -o gromos_gyrate1.xvg
+gmx_mpi gyrate -f md_replica_gromos_2.trr -s production.tpr -o gromos_gyrate2.xvg
+
+gmx_mpi energy -f md_replica_gromos_1.edr -o gromos_Penergy_1.xvg
+gmx_mpi energy -f md_replica_gromos_2.edr -o gromos_Penergy_2.xvg
+
+gmx_mpi sasa -f md_replica_gromos_1.trr -s production.tpr -o gromos_area1.xvg
+gmx_mpi sasa -f md_replica_gromos_2.trr -s production.tpr -o gromos_area2.xvg
+
+tar -cvzf gromos.tar.gz gromos_area1.xvg gromos_area2.xvg gromos_gyrate1.xvg gromos_gyrate2.xvg gromos_hbond1.xvg gromos_hbond2.xvg md_replica_gromos_1.edr \
+ md_replica_gromos_1.log md_replica_gromos_2.edr md_replica_gromos_2.log gromos_Penergy_* parallel_* 

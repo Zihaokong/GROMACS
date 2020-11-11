@@ -1,0 +1,23 @@
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.0/lib64
+export PATH=$PATH:/usr/local/cuda-11.0/bin/
+module load mpi/impi
+module load gcc-9.2.0
+source ~/spack/share/spack/setup-env.sh
+source ~/gromacs2020/bin/GMXRC
+spack load hwloc
+# User specific aliases and functions
+
+gmx_mpi hbond -f md_replica_OPLS_1.trr -s production.tpr -num OPLS_hbond1.xvg
+gmx_mpi hbond -f md_replica_OPLS_2.trr -s production.tpr -num OPLS_hbond2.xvg
+
+gmx_mpi gyrate -f md_replica_OPLS_1.trr -s production.tpr -o OPLS_gyrate1.xvg
+gmx_mpi gyrate -f md_replica_OPLS_2.trr -s production.tpr -o OPLS_gyrate2.xvg
+
+gmx_mpi energy -f md_replica_OPLS_1.edr -o OPLS_Penergy_0.xvg
+gmx_mpi energy -f md_replica_OPLS_2.edr -o OPLS_Penergy_1.xvg
+
+gmx_mpi sasa -f md_replica_OPLS_1.trr -s production.tpr -o OPLS_area1.xvg
+gmx_mpi sasa -f md_replica_OPLS_2.trr -s production.tpr -o OPLS_area2.xvg
+
+tar -cvzf OPLS.tar.gz OPLS_area1.xvg OPLS_area2.xvg OPLS_gyrate1.xvg OPLS_gyrate2.xvg OPLS_hbond1.xvg md_replica_OPLS_1.edr \
+ md_replica_OPLS_1.log md_replica_OPLS_2.edr md_replica_OPLS_2.log OPLS_Penergy_* parallel_* OPLS_hbocnd2.xvg

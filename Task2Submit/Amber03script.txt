@@ -1,0 +1,39 @@
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.0/lib64
+export PATH=$PATH:/usr/local/cuda-11.0/bin/
+module load mpi/impi
+module load gcc-9.2.0
+source ~/spack/share/spack/setup-env.sh
+source ~/gromacs2020/bin/GMXRC
+spack load hwloc
+# User specific aliases and functions
+
+gmx_mpi hbond -f md_replica_amber03_1_4ns.trr -s production.tpr -num Amber03_hbond1.xvg
+gmx_mpi hbond -f md_replica_amber03_2_4ns.trr -s production.tpr -num Amber03_hbond2.xvg
+gmx_mpi hbond -f md_replica_amber03_3_4ns.trr -s production.tpr -num Amber03_hbond3.xvg
+gmx_mpi hbond -f md_replica_amber03_4_4ns.trr -s production.tpr -num Amber03_hbond4.xvg
+
+
+
+gmx_mpi gyrate -f md_replica_amber03_1_4ns.trr -s production.tpr -o Amber03_gyrate1.xvg
+gmx_mpi gyrate -f md_replica_amber03_2_4ns.trr -s production.tpr -o Amber03_gyrate2.xvg
+gmx_mpi gyrate -f md_replica_amber03_3_4ns.trr -s production.tpr -o Amber03_gyrate3.xvg
+gmx_mpi gyrate -f md_replica_amber03_4_4ns.trr -s production.tpr -o Amber03_gyrate4.xvg
+
+
+
+gmx_mpi energy -f md_replica_amber03_1_4ns.edr -o Amber03_Penergy_1.xvg
+gmx_mpi energy -f md_replica_amber03_2_4ns.edr -o Amber03_Penergy_2.xvg
+gmx_mpi energy -f md_replica_amber03_3_4ns.edr -o Amber03_Penergy_3.xvg
+gmx_mpi energy -f md_replica_amber03_4_4ns.edr -o Amber03_Penergy_4.xvg
+
+
+
+gmx_mpi sasa -f md_replica_amber03_1_4ns.trr -s production.tpr -o Amber03_area1.xvg
+gmx_mpi sasa -f md_replica_amber03_2_4ns.trr -s production.tpr -o Amber03_area2.xvg
+gmx_mpi sasa -f md_replica_amber03_3_4ns.trr -s production.tpr -o Amber03_area3.xvg
+gmx_mpi sasa -f md_replica_amber03_4_4ns.trr -s production.tpr -o Amber03_area4.xvg
+
+
+
+tar -cvzf Amber03.tar.gz Amber03_area* Amber03_gyrate* Amber03_hbond* Amber03_Penergy_* md_replica_amber03_1_4ns.edr md_replica_amber03_2_4ns.edr md_replica_amber03_3_4ns.edr  md_replica_amber03_4_4ns.edr \
+ md_replica_amber03_1.log md_replica_amber03_2.log md_replica_amber03_3.log md_replica_amber03_4.log
