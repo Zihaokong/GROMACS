@@ -1,0 +1,54 @@
+;
+;	File 'topol.top' was generated
+;	By user: unknown (1000)
+;	On host: DESKTOP-8HP1LJI
+;	At date: Mon Oct 19 02:20:39 2020
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2020.2 (-:
+;	
+;	Executable:   /usr/local/bin/gmx
+;	Data prefix:  /usr/local
+;	Working dir:  /mnt/c/users/micholas/Desktop/SCC/Task2/Amber03
+;	Command line:
+;	  gmx pdb2gmx -f ../C-term-NProt.pdb -ignh
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "amber03.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_B.itp"
+#include "topol_Protein_chain_C.itp"
+#include "topol_Protein_chain_D.itp"
+#include "topol_Ion.itp"
+
+; Include water topology
+#include "amber03.ff/spce.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "amber03.ff/ions.itp"
+
+[ system ]
+; Name
+VIRAL PROTEIN in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_B     1
+Protein_chain_C     1
+Protein_chain_D     1
+Ion                 1
+SOL             200844
