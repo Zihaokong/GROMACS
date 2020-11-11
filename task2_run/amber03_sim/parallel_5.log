@@ -1,0 +1,555 @@
+==> Found no new compilers
+==> Compilers are defined in the following files:
+    /shared/home/ccuser/.spack/linux/compilers.yaml
+                      :-) GROMACS - gmx mdrun, 2020.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.4
+Executable:   /shared/home/ccuser/gromacs2020/bin/gmx_mpi
+Data prefix:  /shared/home/ccuser/gromacs2020
+Working dir:  /shared/home/ccuser/GROMACS/Task2_runs/amber03_sim
+Command line:
+  gmx_mpi mdrun -s production.tpr -g md_replica_rank180_1.log -o md_replica_rank180_1.trr -e md_replica_rank180_1.edr
+
+Reading file production.tpr, VERSION 2020.4 (single precision)
+Changing nstlist from 20 to 80, rlist from 1.226 to 1.332
+
+Using 180 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 4 OpenMP threads per MPI process
+
+
+WARNING: This run will generate roughly 36352 Mb of data
+
+starting mdrun 'VIRAL PROTEIN in water'
+5000000 steps,  10000.0 ps.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 5 ON hpc-pg0-1 CANCELLED AT 2020-11-10T23:41:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 5.0 ON hpc-pg0-1 CANCELLED AT 2020-11-10T23:41:50 DUE TO TIME LIMIT ***
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
+
+
+Received the second INT/TERM signal, stopping within 21 steps
+
