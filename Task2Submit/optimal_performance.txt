@@ -1,0 +1,5 @@
+Forcefield	Optimal ns/day		time-to-solution
+Amber03		48.545 (150 ranks)	
+Amber99		49.496 (150 ranks)	6430.240s per run
+Gromos		53.857 (150 ranks)	6134.259s per run
+OPL		57.716 (180 ranks)	5968.579s per run

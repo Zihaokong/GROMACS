@@ -1,0 +1,1 @@
+We did the mdrun 4ns for four times, the trajectory file is too big

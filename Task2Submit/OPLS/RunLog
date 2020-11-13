@@ -1,0 +1,303 @@
+==> Found no new compilers
+==> Compilers are defined in the following files:
+    /shared/home/ccuser/.spack/linux/compilers.yaml
+                      :-) GROMACS - gmx mdrun, 2020.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.4
+Executable:   /shared/home/ccuser/gromacs2020/bin/gmx_mpi
+Data prefix:  /shared/home/ccuser/gromacs2020
+Working dir:  /shared/home/ccuser/GROMACS/task2_run/OPLS_sim
+Command line:
+  gmx_mpi mdrun -s production.tpr -g md_replica_rank180_0_4ns.log -o md_replica_rank180_0_4ns.trr -e md_replica_rank180_0_4ns.edr
+
+Reading file production.tpr, VERSION 2020.4 (single precision)
+Changing nstlist from 20 to 80, rlist from 1.226 to 1.332
+
+Using 180 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 4 OpenMP threads per MPI process
+
+
+WARNING: This run will generate roughly 35509 Mb of data
+
+starting mdrun 'VIRAL PROTEIN in water'
+2000000 steps,   4000.0 ps.
+
+Writing final coordinates.
+
+
+Dynamic load balancing report:
+ DLB was off during the run due to low measured imbalance.
+ Average load imbalance: 10.4%.
+ The balanceable part of the MD step is 73%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 7.6%.
+ Average PME mesh/force load: 1.060
+ Part of the total run time spent waiting due to PP/PME imbalance: 4.2 %
+
+NOTE: 7.6 % of the available CPU time was lost due to load imbalance
+      in the domain decomposition.
+      You might want to use dynamic load balancing (option -dlb.)
+      You can also consider manually changing the decomposition (option -dd);
+      e.g. by using fewer domains along the box dimension in which there is
+      considerable inhomogeneity in the simulated system.
+
+NOTE: 6 % of the run time was spent communicating energies,
+      you might want to increase some nst* mdp options
+
+               Core t (s)   Wall t (s)        (%)
+       Time:  3981666.098     5530.330    71996.9
+                         1h32:10
+                 (ns/day)    (hour/ns)
+Performance:       62.492        0.384
+
+GROMACS reminds you: "Teaching quantum computing is like teaching computer science at Hogwarts." (Thomas Sterling, ISC2018 keynote)
+
+
+real	92m15.815s
+user	0m0.013s
+sys	0m0.037s
+                      :-) GROMACS - gmx mdrun, 2020.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.4
+Executable:   /shared/home/ccuser/gromacs2020/bin/gmx_mpi
+Data prefix:  /shared/home/ccuser/gromacs2020
+Working dir:  /shared/home/ccuser/GROMACS/task2_run/OPLS_sim
+Command line:
+  gmx_mpi mdrun -s production.tpr -g md_replica_rank180_1_4ns.log -o md_replica_rank180_1_4ns.trr -e md_replica_rank180_1_4ns.edr
+
+Reading file production.tpr, VERSION 2020.4 (single precision)
+Changing nstlist from 20 to 80, rlist from 1.226 to 1.332
+
+Using 180 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 4 OpenMP threads per MPI process
+
+
+WARNING: This run will generate roughly 35509 Mb of data
+
+starting mdrun 'VIRAL PROTEIN in water'
+2000000 steps,   4000.0 ps.
+
+Writing final coordinates.
+
+Back Off! I just backed up confout.gro to ./#confout.gro.1#
+
+
+Dynamic load balancing report:
+ DLB was off during the run due to low measured imbalance.
+ Average load imbalance: 16.0%.
+ The balanceable part of the MD step is 73%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 11.8%.
+ Average PME mesh/force load: 1.031
+ Part of the total run time spent waiting due to PP/PME imbalance: 2.3 %
+
+NOTE: 11.8 % of the available CPU time was lost due to load imbalance
+      in the domain decomposition.
+      You might want to use dynamic load balancing (option -dlb.)
+      You can also consider manually changing the decomposition (option -dd);
+      e.g. by using fewer domains along the box dimension in which there is
+      considerable inhomogeneity in the simulated system.
+
+NOTE: 6 % of the run time was spent communicating energies,
+      you might want to increase some nst* mdp options
+
+               Core t (s)   Wall t (s)        (%)
+       Time:  4037755.609     5608.193    71997.4
+                         1h33:28
+                 (ns/day)    (hour/ns)
+Performance:       61.624        0.389
+
+GROMACS reminds you: "If at one time or another I have brushed a few colleagues the wrong way, I must apologize: I had not realized that they were covered with fur." (Edwin Chargaff)
+
+
+real	93m34.139s
+user	0m0.023s
+sys	0m0.027s
+                      :-) GROMACS - gmx mdrun, 2020.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.4
+Executable:   /shared/home/ccuser/gromacs2020/bin/gmx_mpi
+Data prefix:  /shared/home/ccuser/gromacs2020
+Working dir:  /shared/home/ccuser/GROMACS/task2_run/OPLS_sim
+Command line:
+  gmx_mpi mdrun -s production.tpr -g md_replica_rank180_2_4ns.log -o md_replica_rank180_2_4ns.trr -e md_replica_rank180_2_4ns.edr
+
+Reading file production.tpr, VERSION 2020.4 (single precision)
+Changing nstlist from 20 to 80, rlist from 1.226 to 1.332
+
+Using 180 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 4 OpenMP threads per MPI process
+
+
+WARNING: This run will generate roughly 35509 Mb of data
+
+starting mdrun 'VIRAL PROTEIN in water'
+2000000 steps,   4000.0 ps.
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2020.4
+Source file: src/gromacs/fileio/trrio.cpp (line 330)
+MPI rank:    0 (out of 180)
+
+File input/output error:
+Cannot write trajectory frame; maybe you are out of disk space?
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+
+real	16m6.071s
+user	0m0.012s
+sys	0m0.027s
+                      :-) GROMACS - gmx mdrun, 2020.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.4
+Executable:   /shared/home/ccuser/gromacs2020/bin/gmx_mpi
+Data prefix:  /shared/home/ccuser/gromacs2020
+Working dir:  /shared/home/ccuser/GROMACS/task2_run/OPLS_sim
+Command line:
+  gmx_mpi mdrun -s production.tpr -g md_replica_rank180_3_4ns.log -o md_replica_rank180_3_4ns.trr -e md_replica_rank180_3_4ns.edr
+
+Reading file production.tpr, VERSION 2020.4 (single precision)
+Changing nstlist from 20 to 80, rlist from 1.226 to 1.332
+
+Using 180 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 4 OpenMP threads per MPI process
+
+
+WARNING: This run will generate roughly 35509 Mb of data
+
+starting mdrun 'VIRAL PROTEIN in water'
+2000000 steps,   4000.0 ps.
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2020.4
+Source file: src/gromacs/fileio/trrio.cpp (line 330)
+MPI rank:    0 (out of 180)
+
+File input/output error:
+Cannot write trajectory frame; maybe you are out of disk space?
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+
+real	0m35.591s
+user	0m0.009s
+sys	0m0.036s

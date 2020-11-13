@@ -1,0 +1,4 @@
+==> Found no new compilers
+==> Compilers are defined in the following files:
+    /shared/home/ccuser/.spack/linux/compilers.yaml
+slurmstepd: error: *** JOB 5 ON hpc-pg0-1 CANCELLED AT 2020-11-11T13:11:11 ***
